@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+    {% block body %}
+
+<form class="form-inline">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label>Firstname</label>
+        <input type="text" id="firstname" class="form-control" style="width:30%;" required="required"/>
+    </div>
+    <div class="mb-3">
+        <label>Lastname</label>
+        <input type="text" id="lastname" class="form-control" style="width:30%;" required="required"/>
+    </div>
+    <div class="mb-3">
+        <label>Email</label>
+        <input type="text" id="email" class="form-control" style="width:30%;" required="required"/>
+    </div>
+    <div class="mb-3">
+        <label>Mobile</label>
+        <input type="number" id="mobile" class="form-control" style="width:30%;" required="required"/>
+    </div>
+    <div class="mb-3">
+        <button type="button" id="create" class="btn btn-primary">Create</button>
+    </div>
+</form>
+<div id="result"></div>
+{% endblock  %}
